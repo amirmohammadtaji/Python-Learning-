@@ -1,4 +1,4 @@
-# Day 04 - Dictionary Practice
+# Day 03 - Dictionary Practice
 # Author: Amir Mohammad Taji
 # Concepts Used:
 # - Dictionary
