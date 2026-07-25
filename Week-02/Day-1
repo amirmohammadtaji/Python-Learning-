@@ -1,0 +1,16 @@
+# Day 05 - Ste Practice
+# Author: Amir Mohammad Taji
+# Concepts Used:
+# - union
+# - intersection
+# ==========================================
+
+
+setA= set({1,2,3,4})
+setB= set({3,4,5,6})
+
+union = setA.union (setB)
+intersection = setA.intersection (setB)
+ 
+print ("union:", union)
+print ("intersection:", intersection)
