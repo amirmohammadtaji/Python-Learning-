@@ -1,0 +1,23 @@
+# Week 02 - Day 02
+# Topic: Comparison Chaining
+# Author: Amir Mohammad Taji
+#
+# Concepts Used:
+# - Comparison Operators (<, <=)
+# - Comparison Chaining
+# - if / else
+# - Boolean Values (True / False)
+# ==========================================
+
+print(" Number Comparison Program ")
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+
+if a < b <= c:
+    print("\nCondition is True ")
+    print(f"{a} < {b} <= {c}")
+else:
+    print("\nCondition is False ")
+    print(f"{a} < {b} <= {c}")
