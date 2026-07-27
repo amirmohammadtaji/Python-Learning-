@@ -4,6 +4,7 @@
 - Tuples
 - Sets
 - Practice Exercises
-
+- Conditional Statements
+  
 ## Goal
 Strengthen Python fundamentals through daily practice.
