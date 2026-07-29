@@ -1,0 +1,24 @@
+# Week 02 Day 03 - Mini Project
+# Topic: Cyber Security Password Checker
+# Author: Amir Mohammad Taji
+#
+# Concepts Used:
+# - User Input
+# - len()
+# - if / elif / else
+# - String
+# ==========================================
+
+print("=== Cyber Security Password Checker ===")
+
+password = input("Enter your password: ")
+length = len(password)
+
+print(f"Password Length: {length}")
+
+if length < 8:
+    print("Weak Password ")
+elif 8 <= length <= 11:
+    print("Medium Password ")
+else:
+    print("Strong Password ")
