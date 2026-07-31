@@ -1,0 +1,29 @@
+# Week 02 - Day 04
+# Topic: Even and Odd Number Counter
+# Author: Amir Mohammad Taji
+#
+# Concepts Used:
+# - for Loop
+# - if / else
+# - split()
+# - List
+# - Counter
+# ==========================================
+
+count_even = 0
+count_odd = 0
+
+numbers = input("Enter numbers separated by space: ").split()
+
+for number in numbers:
+    number = int(number)
+
+    if number % 2 == 0:
+        print(f"{number} is even")
+        count_even += 1
+    else:
+        print(f"{number} is odd")
+        count_odd += 1
+
+print(f"\nWe had {count_even} even numbers")
+print(f"We had {count_odd} odd numbers")
