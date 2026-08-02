@@ -1,0 +1,26 @@
+# Project: Magic Number Analyzer
+# Author: Amir Mohammad Taji
+#
+# Concepts Used:
+# - input()
+# - if / elif / else
+# - Modulo Operator (%)
+# ==========================================
+
+print("========== Magic Number Analyzer ==========")
+
+number = int(input("Enter a number: "))
+
+print(f"\nNumber: {number}")
+
+if number % 3 == 0 and number % 5 == 0:
+    print("Result: Legendary")
+
+elif number % 3 == 0:
+    print("Result: Magic")
+
+elif number % 5 == 0:
+    print("Result: Cursed")
+
+else:
+    print("Result: Normal")
