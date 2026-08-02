@@ -1,0 +1,33 @@
+# HOP GAME
+# Week-03 Day-01
+# Concepts Used:
+# - if / elif / else
+# - Modulo Operator (%)
+# - Boolean Expressions
+# - User Input
+# - f-Strings
+# ================================================
+
+
+print("=============HOP GAME===============")
+
+
+number = int(input("Enter your reng number: "))
+
+print(f"\n your rangr number : ")
+
+n = 0
+while n < number:
+    n += 1
+
+    if n % 3 == 0 and n % 5 == 0:
+        print("Hiphop")
+        continue
+    if n % 3 == 0:
+        print("Hope")
+        continue
+    if n % 5 == 0:
+        print("Hoop")
+        continue
+
+    print(n)
