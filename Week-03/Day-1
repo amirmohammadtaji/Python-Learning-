@@ -1,0 +1,28 @@
+# Week 03 day 01 
+# Topic: Magic Number Analyzer
+# Author: Amir Mohammad Taji
+#
+# Concepts Used:
+# - if / elif / else
+# - Modulo Operator (%)
+# - Boolean Expressions
+# - User Input
+# - f-Strings
+# ==========================================
+
+print("====== Magic Number Analyzer ======")
+
+n = int(input("Enter a number: "))
+
+print(f"\nNumber: {n}")
+print(f"Divisible by 3: {n % 3 == 0}")
+print(f"Divisible by 5: {n % 5 == 0}")
+
+if n % 3 == 0 and n % 5 == 0:
+    print("Result: Legendary ")
+elif n % 3 == 0:
+    print("Result: Magic ")
+elif n % 5 == 0:
+    print("Result: Cursed ")
+else:
+    print("Result: Normal")
