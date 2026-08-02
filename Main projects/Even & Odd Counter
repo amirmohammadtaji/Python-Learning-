@@ -1,0 +1,29 @@
+# Project: Even & Odd Counter
+# Author: Amir Mohammad Taji
+# Concepts Used:
+# - input()
+# - split()
+# - for Loop
+# - if / else
+# ==========================================
+
+print("========== Even & Odd Counter ==========")
+
+numbers = input("Enter numbers separated by space: ").split()
+
+count_even = 0
+count_odd = 0
+
+for number in numbers:
+    number = int(number)
+
+    if number % 2 == 0:
+        print(f"{number} is Even")
+        count_even += 1
+    else:
+        print(f"{number} is Odd")
+        count_odd += 1
+
+print("\n========== Result ==========")
+print(f"Even numbers : {count_even}")
+print(f"Odd numbers  : {count_odd}")
