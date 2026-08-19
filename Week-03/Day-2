@@ -1,0 +1,24 @@
+# Day 02 - Function Practice
+# Project: Power Calculator
+# Concepts Used:
+# - Functions
+# - Parameters
+# - return
+# - for Loop
+# - range()
+# - User Input
+# ==========================================
+
+def tavan(n, t):
+    javab = 1
+
+    for i in range(t):
+        javab *= n
+
+    return javab
+
+
+number = int(input("Enter your number: "))
+power = int(input("Enter the power: "))
+
+print(f"Result: {tavan(number, power)}")
