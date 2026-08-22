@@ -1,0 +1,65 @@
+# Project: Number Guessing Game
+# Author: Amir Mohammad Taji
+# Concepts Used:
+# - Functions
+# - return
+# - while Loop
+# - if / else
+# - random
+# - User Input
+# - f-Strings
+# ==========================================
+
+import random
+
+def welcom():
+    print("Welcom to this funy game")
+    print("I well guess a number between 1 to 20")
+    print("You have to guess it ....")
+    print("go go go go")
+    print()
+
+
+def finish(number, count):
+    print("End game")
+    print(f"my number was {number} and you fund it in {count}")
+
+    answer = input("Doyou want to play again? (Y/N)")
+    if answer.upper() == "Y":
+        return True
+    else:
+        return False
+
+
+def win(computer_number, guess):
+    return computer_number == guess
+
+
+def answer(computer, user):
+    if computer > user:
+        return "my number is larger"
+    if user > computer:
+        return "my number is smaller"
+    else:
+        return "Woooo!! You won"
+
+
+def get_a_guess():
+    ans = input("What is your guess? ")
+    return int(ans)
+
+
+welcom()
+
+continue_playing = True
+while (continue_playing):
+    computer_number = random.randint(1, 20)
+    guess = 0
+    count = 0
+
+    while (not win(computer_number, guess)):
+        guess = get_a_guess()
+        count += 1
+        print(answer(computer_number, guess))
+
+    continue_playing = finish(computer_number, count)
