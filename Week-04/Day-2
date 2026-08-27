@@ -1,0 +1,31 @@
+# Project: Sum and Multiply Numbers
+# Concepts Used:
+# - Functions
+# - *args
+# - return
+# - for Loop
+# - Addition
+# - Multiplication
+# ==========================================
+
+
+def sum_numbers(*args):
+    res = 0
+
+    for i in args:
+        res = res + i
+
+    return res
+
+
+def multiply_numbers(*args):
+    res = 1
+
+    for i in args:
+        res = res * i
+
+    return res
+
+
+print(sum_numbers(3, 4, 5))
+print(multiply_numbers(3, 4, 5))
