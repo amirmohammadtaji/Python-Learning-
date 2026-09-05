@@ -1,0 +1,25 @@
+# Week 04 - Day 03
+# Project: Even or Odd Checker
+# Concepts Used:
+# - Functions
+# - Parameters
+# - return
+# - if / else
+# - Modulo Operator (%)
+# ==========================================
+
+def skyline(*args):
+    if len(args) == 0:
+        return 0
+    
+    max_height = 0
+    for height in args:
+        if height > max_height:
+            max_height = height
+    
+    return max_height
+
+
+print(skyline(3, 7, 15, 2, 9))  
+print(skyline(1, 1, 1, 1))      
+print(skyline())               
