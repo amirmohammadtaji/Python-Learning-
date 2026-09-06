@@ -1,0 +1,61 @@
+# Project: Animal management system design practice in a zoo
+# Author: Amir Mohammad Taji
+# Concepts Used:
+# - Class
+# - Object
+# - Class Attribute
+# - Constructor
+# - Method
+# - User Input
+# - Polymorphism
+# ==========================================
+class Animal():
+    class Animal:
+        zoo_name = "maku zoo"
+    def __init__(self, name, species, age, sound):
+        
+        self.name = name
+        self.species = species
+        self.age = age
+        self.sound = sound
+        
+    def __str__(self):
+         return f"Name: {self.name}, Species: {self.species}, Age: {self.age}, Sound: {self.sound}"
+     
+    def open(self):
+        print(
+            f"Animal namme is: {self.name} the species is : {self.species} and age is {self.age} with {self.sound} sound")
+
+    def info(self):
+            print(
+                f"Name:{self.name}\n Species:{self.species}\n Age:{self.age}\n sound :{self.sound}")
+    def make_sound(self):
+        print(
+            f"{self.name} makes {self.sound}"
+        )
+        
+        
+class Bird (Animal):
+    def __init__(self,wing_span, name, species, age, sound):
+        Animal.__init__(self, name, species, age, sound)
+        print("new animal")
+        self.wing_span= wing_span
+    
+    def make_sound(self):
+        print(
+            f"{self.name} makes {self.sound}"
+        )
+
+    def info(self): 
+        super().info() 
+        print(f"Wing Span: {self.wing_span}")
+        
+lion = Animal("Leo", "Lion", 5, "Roar") 
+print(lion) 
+lion.info() 
+lion.make_sound()
+
+bird = Bird(2.5, "Rio", "Eagle", 3, "Screech") 
+print(bird) 
+bird.info() 
+bird.make_sound()
