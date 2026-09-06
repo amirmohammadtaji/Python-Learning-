@@ -1,0 +1,36 @@
+# Week 04 - Day 04
+# Book Management System
+# Object-Oriented Programming (OOP)
+# Concepts Used:
+# - Functions
+# - Constructor
+# - Method
+# - Inheritance
+# - Main Program
+# ==========================================
+class Book():
+    def __init__(self, name, page):
+        self.pages = page
+        self.name = name
+
+    def open(self):
+        print(
+            f"opened the {self.name} in last page ({self.pages}) page"
+            )
+
+
+class darci():
+    def __init__(self, reshte, paye, name, page):
+        Book.__init__(self, name, page)
+        print("a new darci book")
+        self.reshte = reshte
+        self.paye = paye
+
+    def open(self):
+        print(
+            f"opened {self.name} which has {self.pages} page"
+            )
+
+
+Darci = darci("Riyazi", 3, "300 Notics", 120)
+Darci.open()
