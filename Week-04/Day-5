@@ -1,0 +1,33 @@
+# Week 04 - Day 05
+# Divide Management System
+# Concepts Used:
+# - Functions
+# - def
+# - break
+# - try / except / else
+# - while True
+# ==========================================
+
+
+while True:
+    try:
+        num1 = int(input('Enter first number: '))
+        num2 = int(input("enter second number: "))
+        break
+    except ValueError:
+        print("Please enter a valid number")
+
+
+def divide(a, b):
+    try:
+        result = a / b
+    except ZeroDivisionError as e:
+        print(f"Error: {e}")
+        result = None
+    else:
+        print("Result:", result)
+    return result
+
+
+print(divide(num1, num2))
+print("The program run successful")
