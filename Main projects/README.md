@@ -21,7 +21,7 @@
 - Polymorphism
 - Constructor
 
-## 5- Number لuessing لame 🔢
+## 5- Number guessing game 🎮
 - while Loop
 - User Input
 - Functions
