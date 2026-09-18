@@ -16,5 +16,10 @@
 - Show result (Magic / Cursed / Legendary / Normal)
 - Ordered output
 
+## 4- Animal management system design practice in a zoo 🐊
+- Class Attribute
+- Polymorphism
+- Constructor
+
 # Goal
 Assigning more difficult projects
