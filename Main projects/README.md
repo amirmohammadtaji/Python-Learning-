@@ -11,7 +11,7 @@
 - Even and odd counting
 - Using for, split(), if
 
-## 3- Magic Number Analyzer🧙
+## 3- Magic Number Analyzer 🧙
 - Checking divisibility by 3 and 5
 - Show result (Magic / Cursed / Legendary / Normal)
 - Ordered output
@@ -21,5 +21,11 @@
 - Polymorphism
 - Constructor
 
+## 5- Number لuessing لame 🔢
+- while Loop
+- User Input
+- Functions
+
+  
 # Goal
 Assigning more difficult projects
