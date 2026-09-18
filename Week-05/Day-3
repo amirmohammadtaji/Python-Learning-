@@ -1,0 +1,50 @@
+# Week 05 - Day 03
+# Project: Basic Web Scraper
+# Author: Amir Mohammad Taji
+#
+# Description:
+# A simple web scraper that connects to a website,
+# extracts product titles and image links,
+# and displays the collected information.
+#
+# Concepts Used:
+# - requests
+# - BeautifulSoup
+# - HTTP Status Codes
+# - HTML Parsing
+# - find_all()
+# - List Comprehension
+# - for Loop
+# - Dictionaries
+# - Error Handling
+# ==========================================
+
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://webscraper.io/test-sites/e-commerce/allinone"
+response = requests.get(url)
+
+if response.status_code != 200:
+    print("Error  connecting to site ", response.status_code)
+    exit()
+print("secsesful connected")
+
+soup = BeautifulSoup(response.text, "html.parser")
+
+page_title = soup.title.text
+print("\nTitle page: ", page_title)
+print("=" * 50)
+
+product_titles = soup.find_all("a", class_="title")
+titles = [t["title"] for t in product_titles]
+
+images = soup.find_all("img", class_="img-responsive")
+image_links = ["https://webscraper.io" + img["src"] for img in images]
+
+for i in range(len(titles)):
+    print(f"{i+1}. title: {titles[i]}")
+    if i < len(image_links):
+        print(f"images: {image_links[i]}")
+    print()
+    
