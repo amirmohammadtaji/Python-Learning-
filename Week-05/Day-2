@@ -1,3 +1,20 @@
+# Week 05 - Day 02
+# Exercise: Execution Time Decorator
+# Author: Amir Mohammad Taji
+# Description:
+# A simple decorator that measures and displays
+# the execution time of a function.
+# Concepts Used:
+# - Decorators
+# - Functions
+# - Wrapper Functions
+# - Function Arguments
+# - return
+# - time module
+# - range()
+# - List
+# ==========================================
+
 import time
 
 
