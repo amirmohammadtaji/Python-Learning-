@@ -1,3 +1,20 @@
+ Week 05 - Day 01
+# Exercise: Time-Based Decorator
+# Author: Amir Mohammad Taji
+# Description:
+# A decorator that controls whether a function
+# runs based on the current minute.
+# Concepts Used:
+# - Decorators
+# - Functions
+# - Wrapper Functions
+# - Function Arguments
+# - return
+# - datetime module
+# - Conditional Statements
+# - Modulo Operator (%)
+# ==========================================
+
 import datetime
 now = datetime.datetime.now()
 minute = now.minute
