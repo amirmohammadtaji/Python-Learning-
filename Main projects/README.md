@@ -26,6 +26,10 @@
 - User Input
 - Functions
 
+## 5- CSV Product Processor💲
+- Read products from a CSV file
+- Display processed products
+- Dictionaries
   
 # Goal
 Assigning more difficult projects
