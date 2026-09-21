@@ -1,0 +1,79 @@
+# Main Project: CSV Product Processor
+# Author: Amir Mohammad Taji
+# Description:
+# A simple Python program that reads product
+# information from a CSV file, calculates the
+# total price for each product, and saves the
+# processed data into a new CSV file.
+# Features:
+# - Read products from a CSV file
+# - Convert price and quantity to numbers
+# - Calculate total price
+# - Save processed data to a new CSV file
+# - Display processed products
+# Concepts Used:
+# - csv module
+# - Functions
+# - Dictionaries
+# - Lists
+# - File Handling
+# - csv.DictReader
+# - csv.DictWriter
+# - for Loop
+# - Type Conversion
+# - if __name__ == "__main__"
+# ==========================================
+import csv
+
+INPUT_FILE = r"C:\Users\ASUS\Downloads\py.csv"
+OUTPUT_FILE = "products_processed.csv"
+
+
+def process_products(input_file, output_file):
+
+    processed_rows = []
+
+    with open(input_file, "r", encoding="utf-8-sig") as file:
+
+        reader = csv.DictReader(file)
+
+        for row in reader:
+
+            name = row["Product Name"]
+            price = float(row["Price"])
+            quantity = int(row["Quantity"])
+
+            total_price = price * quantity
+
+            processed_rows.append({
+                "Product Name": name,
+                "Price": price,
+                "Quantity": quantity,
+                "Total": total_price
+            })
+
+    with open(output_file, "w", newline="", encoding="utf-8-sig") as file:
+
+        fieldnames = ["Product Name", "Price", "Quantity", "Total"]
+
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+
+        writer.writeheader()
+        writer.writerows(processed_rows)
+
+    print(f"Output file: {output_file}")
+
+    return processed_rows
+
+
+if __name__ == "__main__":
+
+    results = process_products(INPUT_FILE, OUTPUT_FILE)
+
+    for r in results:
+        print(
+            f"{r['Product Name']}: "
+            f"Price={r['Price']}, "
+            f"Quantity={r['Quantity']}, "
+            f"Total={r['Total']}"
+        )
