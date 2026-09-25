@@ -26,10 +26,16 @@
 - User Input
 - Functions
 
-## -6 CSV Product Processor💲
+## 6- CSV Product Processor💲
 - Read products from a CSV file
 - Display processed products
 - Dictionaries
+
+## 7- Main Project: Library Management System 📚
+ - Object-Oriented Programming (OOP)
+ - Dictionaries
+ - Lists
+
   
 # Goal
 Assigning more difficult projects
