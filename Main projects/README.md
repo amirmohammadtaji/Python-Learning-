@@ -26,7 +26,7 @@
 - User Input
 - Functions
 
-## 5- CSV Product Processor💲
+## -6 CSV Product Processor💲
 - Read products from a CSV file
 - Display processed products
 - Dictionaries
