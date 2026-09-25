@@ -1,0 +1,92 @@
+# Main Project: Library Management System
+# Author: Amir Mohammad Taji
+# Description:
+# A simple library management program built
+# with Python that allows users to add, remove,
+# search, and display books.
+# Features:
+# - Add books
+# - Remove books
+# - Search for books
+# - Show all books
+# Concepts Used:
+# - Object-Oriented Programming (OOP)
+# - Classes
+# - Objects
+# - __init__
+# - Methods
+# - Lists
+# - Dictionaries
+# - for Loop
+# - Conditional Statements
+# - User Input
+# - return
+# - if __name__ == "__main__"
+# - Modules
+# - import
+# ======================================================
+class Library:
+    def __init__(self):
+        self.books = []
+
+    def add_book(self, title, author):
+
+        self.books.append({
+            "title": title,
+            "author": author
+        })
+
+    def remove_book(self, title):
+        for book in self.books:
+            if book["title"] == title:
+                self.books.remove(book)
+                break
+
+    def search_book(self, title):
+        for book in self.books:
+            if book["title"] == title:
+                print(book)
+                return
+
+        print("it`s not exist")
+
+    def show_books(self):
+        for book in self.books:
+            print(book)
+            
+            
+from library import Library
+
+library = Library()
+
+if __name__ == "__main__":
+    while True:
+        print("1. Add book")
+        print("2. Remove book")
+        print("3. Serch book")
+        print("4. Show books")
+        print("5. Exite")
+
+        choice = input("chose an option: ")
+        if choice == "1":
+            title = input("Enter book title : ")
+            author = input("Enter book author : ")
+            library.add_book(title, author)
+
+        elif choice == "2":
+            title = input("Enter book titlr to remove: ")
+            library.remove_book(title)
+
+        elif choice == "3":
+            title = input("Enter title to search: ")
+            library.search_book(title)
+
+        elif choice == "4":
+            library.show_books()
+
+        elif choice == "5":
+            break
+        else:
+            print("invalid opthion")
+            
+            
