@@ -1,0 +1,53 @@
+# Week-03 Day-03
+# Practice Project: Simple Command Dispatcher
+# Author: Amir Mohammad Taji
+# Description:
+# A basic command-line command dispatcher built with
+# Python that takes user input and runs the matching
+# command object. This is the first small building
+# block toward the Cyber Jarvis command system.
+# Features:
+# - Register commands as objects (name + message)
+# - Look up a command by name and run it
+# - Handle invalid commands
+# - Exit cleanly on user request
+# Concepts Used:
+# - Object-Oriented Programming (OOP)
+# - Classes
+# - Objects
+# - __init__
+# - Methods
+# - Dictionaries
+# - while loop
+# - if / elif / else
+# - String methods (.lower())
+# - User Input
+# ==========================================
+
+class Command:
+    def __init__(self, name, message):
+        self.name = name
+        self.message = message
+
+    def run(self):
+        print(self.message)
+
+
+obj1 = Command("hello", "Hi Amir!")
+obj2 = Command("time", "Checking the time...")
+
+Commands = {
+    "hello": obj1,
+    "time": obj2
+}
+
+while True:
+    choice = input("Enter a command:").lower()
+    if choice in Commands:
+        Commands[choice].run()
+
+    elif choice == "exit":
+        break
+
+    else:
+        print("command is not avilible")
