@@ -1,0 +1,111 @@
+# Final Course Project: To-Do List Manager
+# Author: Amir Mohammad Taji
+# Description:
+# A simple To-Do List application built with
+# Python that allows users to add, remove,
+# display, save, and load tasks.
+# Features:
+# - Add tasks
+# - Remove tasks
+# - Show tasks
+# - Save tasks to CSV
+# - Load tasks from CSV
+# Concepts Used:
+# - Object-Oriented Programming (OOP)
+# - Classes
+# - Objects
+# - __init__
+# - __str__
+# - Methods
+# - Lists
+# - Loops
+# - Conditional Statements
+# - User Input
+# - File Handling
+# - CSV
+# - csv.writer
+# - csv.reader
+# - if __name__ == "__main__"
+# ==========================================
+
+import csv
+
+
+class Task:
+    def __init__(self, name, description, priority):
+        self.name = name
+        self.description = description
+        self.priority = priority
+
+    def __str__(self):
+        return f"Name: {self.name}, Description: {self.description}, priority: {self.priority} "
+
+
+class ToDoList:
+    def __init__(self):
+        self.tasks = []
+
+    def add_task(self, name, description, priority):
+        new_task = Task(name, description, priority)
+        self.tasks.append(new_task)
+
+    def remove_task(self, name):
+        for task in self.tasks:
+            if task.name == name:
+                self.tasks.remove(task)
+                break
+
+    def show_tasks(self):
+        for task in self.tasks:
+            print(task)
+
+    def save_to_csv(self, filename):
+        with open(filename, "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(["name", "description", "priority"])
+            for task in self.tasks:
+                writer.writerow([task.name, task.description, task.priority])
+
+    def load_from_csv(self, filename):
+        with open(filename, "r", newline="", encoding="utf-8") as f:
+            reader = csv.reader(f)
+            next(reader)
+            for row in reader:
+                self.add_task(row[0], row[1], row[2])
+
+
+todo = ToDoList()
+if __name__ == "__main__":
+    while True:
+        print("1. Add task:")
+        print("2. Remove task:")
+        print("3. Show tasks:")
+        print("4. Save to CSV:")
+        print("5. Load from CSV:")
+        print("6. Exite")
+
+        choice = input("chose an option: ")
+        if choice == "1":
+            titel = input("Enter your task name:")
+            description = input("Enter your task description: ")
+            priority = input("Enter your task priority: ")
+            todo.add_task(titel, description, priority)
+
+        elif choice == "2":
+            titel = input("Enter titel to remove : ")
+            todo.remove_task(titel)
+
+        elif choice == "3":
+            todo.show_tasks()
+
+        elif choice == "4":
+            todo.save_to_csv("tasks.csv")
+
+        elif choice == "5":
+            todo.load_from_csv("tasks.csv")
+
+        elif choice == "6":
+            break
+
+        else:
+            print("Invalid Opthion")
