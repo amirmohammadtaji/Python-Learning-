@@ -1,0 +1,79 @@
+# Week-05 Day-05
+# Practice Project: Command Dispatcher with Functions
+# Author: Amir Mohammad Taji
+# Description:
+# An upgraded version of the command-line command
+# dispatcher, where each command stores a function
+# (instead of a fixed message) and runs it when called.
+# Includes a real user-input command (even/odd checker),
+# a help command, and a clean exit. Another step toward
+# the Cyber Jarvis command system.
+# Features:
+# - Register commands as objects (name + action function)
+# - Run the stored function when a command is called
+# - "help" command lists all available commands
+# - "even" command takes user input and checks even/odd
+# - Exit cleanly on user request
+# Concepts Used:
+# - Object-Oriented Programming (OOP)
+# - Classes
+# - Objects
+# - __init__
+# - Methods
+# - Functions as values (passing functions without calling them)
+# - Dictionaries
+# - while loop
+# - if / elif / else
+# - String methods (.lower())
+# - Type Conversion (int())
+# - Modulo Operator (%)
+# - User Input
+# ==========================================
+class Command:
+    def __init__(self, name, action):
+        self.name = name
+        self.action = action
+
+    def run(self):
+        self.action()
+
+
+def check_time():
+    print("Chacking time .....")
+
+
+def say_hello():
+    print("Hi! Amir")
+
+
+def check_even():
+    number = int(input("Enter number:"))
+    if number % 2 == 0:
+        print("it`s even")
+    else:
+        print("it`s odd")
+
+
+obj1 = Command("hello", say_hello)
+obj2 = Command("time", check_time)
+obj3 = Command("even", check_even)
+
+
+Commands = {
+    "hello": obj1,
+    "time": obj2,
+    "even": obj3
+}
+
+while True:
+    choice = input("Enter a command:").lower()
+    if choice in Commands:
+        Commands[choice].run()
+
+    elif choice == "exit":
+        break
+    elif choice == "help":
+        for i in Commands:
+            print(i)
+    else:
+        print("command is not avilible")
