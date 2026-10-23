@@ -1,3 +1,13 @@
-# Week 01
+# Week 03
 
-Python Basics
+## Topics
+
+- Parameters
+- User Input
+- Handle invalid commands
+- Methods
+- Classes
+
+## Goal
+
+Continue strengthening Python fundamentals through daily practice and hands-on coding.
