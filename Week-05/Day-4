@@ -22,10 +22,10 @@
 # - Conditional Statements
 # - User Input
 # - File Handling
-# - CSV
 # - csv.writer
-# - csv.reader
+# - CSV
 # - if __name__ == "__main__"
+# - csv.reader
 # ==========================================
 
 import csv
