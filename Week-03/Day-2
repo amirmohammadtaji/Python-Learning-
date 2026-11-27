@@ -1,12 +1,12 @@
 # Day 02 - Function Practice
 # Project: Power Calculator
 # Concepts Used:
-# - Functions
 # - Parameters
+# - Functions
 # - return
 # - for Loop
-# - range()
 # - User Input
+# - range()
 # ==========================================
 
 def tavan(n, t):
