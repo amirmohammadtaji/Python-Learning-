@@ -18,11 +18,11 @@
 # - __init__
 # - Methods
 # - Dictionaries
-# - while loop
 # - if / elif / else
-# - String methods (.lower())
+# - while loop
 # - User Input
-# ==========================================
+# - String methods (.lower())
+# ===========================================
 
 class Command:
     def __init__(self, name, message):
